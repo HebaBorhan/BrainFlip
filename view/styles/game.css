@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2;
+    background-color: rgba(149, 146, 146, 0.579);
 }
 
 .buttons span {
