@@ -7,7 +7,7 @@ body {
 }
 
 .buttons {
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -20,18 +20,18 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: brown;
-    color: antiquewhite;
+    background-color: rgb(55, 54, 54);
+    color: rgb(231, 227, 221);
 }
 
 .player-container {
     width: 1080px;
     margin: 20px auto 0;
-    background-color: rgb(242, 242, 81);
+    background-color: rgb(208, 208, 203);
     padding: 20px;
     font-size: 24px;
     overflow: hidden;
-    border: 4px solid rgb(163, 6, 6);
+    border: 4px solid rgb(30, 27, 27);
 }
 
 .player-container .name {
@@ -63,7 +63,7 @@ body {
 }
 
 .game-blocks .card-block .front {
-    background-color: rgb(163, 6, 6);
+    background-color: rgb(75, 73, 73);
     line-height: 200px;
 }
 
@@ -90,7 +90,7 @@ body {
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
-    border: 4px solid rgb(163, 6, 6);
+    border: 4px solid rgb(75, 73, 73);
 }
 
 .game-blocks .card-block.is-clicked {
