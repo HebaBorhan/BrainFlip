@@ -18,6 +18,8 @@ sudo apt install -y python3 python3-pip
 
 sudo pip3 install sqlalchemy
 
+sudo pip3 install python-dotenv
+
 mkdir brainflip
 cd brainflip
 npm init -y
