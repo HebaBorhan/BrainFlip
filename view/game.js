@@ -70,12 +70,17 @@ function matchedCards(firstCard, secondCard) {
 
         firstCard.classList.add("is-matched");
         secondCard.classList.add("is-matched");
+
+        document.getElementById("matched").play();
+
     } else {
         flipsElement.innerHTML = parseInt(flipsElement.innerHTML) + 1;
         setTimeout(() => {
             firstCard.classList.remove("is-clicked");
             secondCard.classList.remove("is-clicked");
         }, duration);
+
+        document.getElementById("wrong").play();
     }
 }
 
