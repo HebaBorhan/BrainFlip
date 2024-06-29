@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2;
+    background-color: rgba(149, 146, 146, 0.579);
 }
 
 .buttons span {
@@ -71,6 +72,9 @@ body {
 }
 
 .game-blocks .card-block .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(75, 73, 73);
     line-height: 200px;
 }
@@ -106,4 +110,5 @@ body {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    pointer-events: none;
 }

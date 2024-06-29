@@ -18,11 +18,13 @@ let cards = Array.from(gameBlocks.children);
 
 let cardsOrder = [...Array(cards.length).keys()];
 
+console.log(cardsOrder);
 cardsShuffle(cardsOrder);
+console.log(cardsOrder);
 
 // order css property to cards
 cards.forEach((card, index) => {
-    cardsOrder[index] = card.style.order;
+    card.style.order = cardsOrder[index];
 
     // click event
     card.addEventListener("click", function () {
@@ -62,18 +64,23 @@ function noClick() {
 function matchedCards(firstCard, secondCard) {
     let flipsElement = document.querySelector(".flips span");
 
-    if (firstCard.dataset.potter === secondCard.dataset.potter) {
+    if (firstCard.getAttribute("harry-potter") === secondCard.getAttribute("harry-potter")) {
         firstCard.classList.remove("is-clicked");
         secondCard.classList.remove("is-clicked");
 
         firstCard.classList.add("is-matched");
         secondCard.classList.add("is-matched");
+
+        document.getElementById("matched").play();
+
     } else {
         flipsElement.innerHTML = parseInt(flipsElement.innerHTML) + 1;
         setTimeout(() => {
             firstCard.classList.remove("is-clicked");
             secondCard.classList.remove("is-clicked");
         }, duration);
+
+        document.getElementById("wrong").play();
     }
 }
 
@@ -83,7 +90,7 @@ function cardsShuffle(array) {
     let randomIndex;
     let temp;
 
-    while (currentIndex != 0) {
+    while (currentIndex > 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
