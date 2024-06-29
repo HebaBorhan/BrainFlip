@@ -8,6 +8,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 header {
@@ -41,30 +43,34 @@ header nav ul li a:hover {
 
 #intro {
     position: relative;
-    height: 100vh;
-    background: url('images/cover.jpg') no-repeat center center/cover;
+    padding-top: 70px; /* Adjusted to accommodate the header height */
+    background: url('images/cover.jpg') no-repeat center top/cover;
     text-align: center;
     color: white;
+    height: 100vh; /* Ensures section covers entire viewport height */
 }
 
-#intro .intro-text {
+.intro-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 80%; /* Limit text width to prevent overflow on smaller screens */
 }
 
-#intro .intro-text h1 {
-    font-size: 60px;
+.intro-text h1 {
+    font-size: 24px;
     margin-bottom: 20px;
+    color: #7a3f0a;
+    padding-top: 20px;
 }
 
-#intro .intro-text p {
+.intro-text p {
     font-size: 24px;
     margin-bottom: 30px;
 }
 
-#intro .intro-text .play-button {
+.intro-text .play-button {
     background-color: #f39c12;
     color: white;
     padding: 15px 30px;
@@ -74,7 +80,7 @@ header nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-#intro .intro-text .play-button:hover {
+.intro-text .play-button:hover {
     background-color: #e67e22;
 }
 
