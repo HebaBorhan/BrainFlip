@@ -72,6 +72,9 @@ body {
 }
 
 .game-blocks .card-block .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(75, 73, 73);
     line-height: 200px;
 }
@@ -107,4 +110,5 @@ body {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    pointer-events: none;
 }
