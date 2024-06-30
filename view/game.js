@@ -1,18 +1,44 @@
-document.querySelector(".buttons span").onclick = function () {
-    let UserName = prompt("Please Enter Your Name");
+document.addEventListener("DOMContentLoaded", function () {
+    let startTime;
+    let score = 0;
+    let flipsElement = document.querySelector(".flips span");
+    let timeElement = document.querySelector(".time span");
+    let username;
 
-    if (UserName == null || UserName == "") {
-        document.querySelector(".name span").innerHTML = "Unknown";
-    } else {
-        document.querySelector(".name span").innerHTML = UserName;
-    }
+    fetch('/api/user')
+        .then(response => response.json())
+        .then(data => {
+            if (data.username) {
+                username = data.username;
+                document.querySelector(".name span").innerHTML = username;
+            } else {
+                username = null;
+                document.querySelector(".name span").innerHTML = "Unknown";
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching username:', error);
+            document.querySelector(".name span").innerHTML = "Unknown";
+        });
 
-    document.querySelector(".buttons").remove();
-};
+    document.querySelector(".buttons span").onclick = function () {
+        if (!username) {
+            alert("Please log in first.");
+            return;
+        }
+        document.querySelector(".buttons").remove();
+        startTime = Date.now();  // Set the start time here
+        timeElement.innerHTML = '00:00';  // Reset time display
+        gameInterval = setInterval(updateTime, 1000);
+        gameBlocks.style.visibility = 'visible';  // Show game blocks
+    };
 
-let duration = 2000;
+
+let duration = 500;
 
 let gameBlocks = document.querySelector(".game-blocks");
+gameBlocks.style.visibility = 'hidden';  // Hide game blocks initially
+
 
 let cards = Array.from(gameBlocks.children);
 
@@ -62,7 +88,6 @@ function noClick() {
 
 // matching cards
 function matchedCards(firstCard, secondCard) {
-    let flipsElement = document.querySelector(".flips span");
 
     if (firstCard.getAttribute("harry-potter") === secondCard.getAttribute("harry-potter")) {
         firstCard.classList.remove("is-clicked");
@@ -73,6 +98,16 @@ function matchedCards(firstCard, secondCard) {
 
         document.getElementById("matched").play();
 
+        score += 10;
+
+        if (document.querySelectorAll('.is-matched').length === cards.length) {
+            clearInterval(gameInterval);  // Stop the timer
+            let timeTaken = Math.floor((Date.now() - startTime) / 1000);
+            let finalScore = score - (parseInt(flipsElement.innerHTML) * 5);
+            alert(`Game Over! Your score is ${finalScore}. Time taken: ${timeTaken} seconds.`);
+            submitScore(finalScore);
+        }
+
     } else {
         flipsElement.innerHTML = parseInt(flipsElement.innerHTML) + 1;
         setTimeout(() => {
@@ -82,6 +117,31 @@ function matchedCards(firstCard, secondCard) {
 
         document.getElementById("wrong").play();
     }
+}
+
+function updateTime() {
+    let elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+    let minutes = Math.floor(elapsedTime / 60).toString().padStart(2, '0');
+    let seconds = (elapsedTime % 60).toString().padStart(2, '0');
+    timeElement.innerHTML = `${minutes}:${seconds}`;
+}
+
+//send score to user's scores
+function submitScore(finalScore) {
+    fetch('/api/score', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ score: finalScore }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch(error => {
+            console.error('Error submitting score:', error);
+        });
 }
 
 // shuffling cards
@@ -102,4 +162,5 @@ function cardsShuffle(array) {
         array[randomIndex] = temp;
     };
     return array;
-};
+    }
+});

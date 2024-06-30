@@ -42,13 +42,20 @@ body {
 
 .player-container .name {
     float: left;
-    width: 50%;
+    width: 30%;
 }
 
 .player-container .flips {
     float: right;
-    width: 50%;
+    width: 30%;
     text-align: right;
+}
+
+.player-container .time {
+    float: right;
+    width: 30%;
+    text-align: right;
+    margin-right: 30px;
 }
 
 .game-blocks {

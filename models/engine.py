@@ -6,9 +6,10 @@ from dotenv import load_dotenv
 import os
 from models.base_model import Base
 from models.user import User
+from models.score import Score
 
 
-classes = {"User": User}
+classes = {"User": User, "Score": Score}
 
 class DBStorage:
     """This class manages storage of BrainFlip models in db"""
