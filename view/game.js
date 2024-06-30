@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     document.querySelector(".buttons span").onclick = function () {
-        if (!username) {
-            alert("Please log in first.");
-            return;
-        }
+        // if (!username) {
+           // alert("Please log in first.");
+           // return;
+        //}
         document.querySelector(".buttons").remove();
         startTime = Date.now();  // Set the start time here
         timeElement.innerHTML = '00:00';  // Reset time display
