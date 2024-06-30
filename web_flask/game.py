@@ -30,17 +30,17 @@ def get_user():
 def add_score():
     """record the score"""
     data = request.get_json()
-    user_id = request.cookies.get('user_id')  # Assuming user_id is stored in cookies
-    if not user_id:
+    username = request.cookies.get('username')  # Assuming user_id is stored in cookies
+    if not username:
         return jsonify({'message': 'User not authenticated'}), 401
     
     score_value = data.get('score')
     if score_value is None:
         return jsonify({'message': 'Score is required'}), 400
 
-    user = storage.get(User, user_id)
+    user = storage.get(User, username=username)
     if user:
-        score = Score(user_id=user.id, score=score_value)
+        score = Score(user_id=user.username, score=score_value)
         storage.new(score)
         storage.save()
         return jsonify({'message': 'Score added successfully'}), 201
@@ -50,9 +50,8 @@ def add_score():
 def get_scores():
     """Fetch scores ordered by score in descending order"""
     try:
-        scores = storage.all(Score)
-        sorted_scores = sorted(scores, key=lambda x: x.score, reverse=True)
-        return jsonify([score.to_dict() for score in sorted_scores]), 200
+        scores = storage.session.query(Score).order_by(Score.score.desc()).all()
+        return jsonify([score.to_dict() for score in scores]), 200
     except Exception as e:
         print(f"Error fetching scores: {str(e)}")
         return jsonify({'message': 'Failed to fetch scores'}), 500
