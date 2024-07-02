@@ -1,8 +1,8 @@
 from flask import Flask
 from login import app as login_app
 from game import app as game_app
-from leaderboard import leaderboard_bp  # Assuming you use Blueprint here
-from dashboard import dashboard_bp  # Assuming you use Blueprint here
+from leaderboard import leaderboard_bp
+from dashboard import dashboard_bp
 from registration import app as registration_app
 
 app = Flask(__name__)
