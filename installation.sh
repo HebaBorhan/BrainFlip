@@ -20,6 +20,8 @@ sudo pip3 install sqlalchemy
 
 sudo pip3 install python-dotenv
 
+sudo pip3 install Flask
+
 mkdir brainflip
 cd brainflip
 npm init -y

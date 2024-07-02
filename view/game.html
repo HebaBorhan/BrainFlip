@@ -7,229 +7,249 @@
     <link rel="stylesheet" href="styles/game.css">
 </head>
 <body>
-  <div class="buttons">
-    <span>Start Game</span>
-  </div>
-
-  <div class="player-container">
-    <div class="name">
-        Hello: <span></span>
-    </div>
-    <div class="flips">
-        Wrong Flips: <span>0</span>
-    </div>
-    <div class="time">
-        Time: <span>00:00</span>
-    </div>
-  </div>
-
-  <div class="game-blocks">
-    <div class="card-block" harry-potter="friends">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+    <header>
+        <div class="logo">
+            <img src="images/logoBF.png" alt="BrainFlip">
         </div>
-        <div class="side back">
-            <img src="images/friends.png" alt="">
+        <nav>
+            <a href="landing.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="game.html" class="active">Game</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <div class="auth-buttons">
+                <button onclick="location.href='login.html'">Login</button>
+                <button onclick="location.href='registration.html'">Registration</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="breadcrumb">
+            <a href="landing.html">Home</a> / <span>Game</span>
         </div>
-    </div>
-    <div class="card-block" harry-potter="friends">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/friends.png" alt="">
-        </div>
+    </main>
+    <div class="buttons">
+        <span>Start Game</span>
     </div>
 
-    <div class="card-block" harry-potter="gryffindor">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+    <div class="player-container">
+        <div class="name">
+            Hello: <span></span>
         </div>
-        <div class="side back">
-            <img src="images/gryffindor.png" alt="">
+        <div class="flips">
+            Wrong Flips: <span>0</span>
         </div>
-    </div>
-    <div class="card-block" harry-potter="gryffindor">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/gryffindor.png" alt="">
+        <div class="time">
+            Time: <span>00:00</span>
         </div>
     </div>
 
-    <div class="card-block" harry-potter="harryflying">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+    <div class="game-blocks">
+        <div class="card-block" harry-potter="friends">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/friends.png" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/harry flying.png" alt="">
+        <div class="card-block" harry-potter="friends">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/friends.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="harryflying">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/harry flying.png" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="harryicon">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="gryffindor">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/gryffindor.png" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/harry_potter_icon.png" alt="">
+        <div class="card-block" harry-potter="gryffindor">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/gryffindor.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="harryicon">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/harry_potter_icon.png" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="hedwigflying">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="harryflying">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/harry flying.png" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/hedwig flying.jpg" alt="">
+        <div class="card-block" harry-potter="harryflying">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/harry flying.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="hedwigflying">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/hedwig flying.jpg" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="hedwig">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="harryicon">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/harry_potter_icon.png" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/hedwig.jpg" alt="">
+        <div class="card-block" harry-potter="harryicon">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/harry_potter_icon.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="hedwig">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/hedwig.jpg" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="key">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="hedwigflying">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/hedwig flying.jpg" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/key.jpg" alt="">
+        <div class="card-block" harry-potter="hedwigflying">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/hedwig flying.jpg" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="key">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/key.jpg" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="letters">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="hedwig">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/hedwig.jpg" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/letters.png" alt="">
+        <div class="card-block" harry-potter="hedwig">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/hedwig.jpg" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="letters">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/letters.png" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="logo">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="key">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/key.jpg" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/logo.png" alt="">
+        <div class="card-block" harry-potter="key">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/key.jpg" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="logo">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/logo.png" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="platform">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="letters">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/letters.png" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/platform-9-3-4.jpg" alt="">
+        <div class="card-block" harry-potter="letters">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/letters.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="platform">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/platform-9-3-4.jpg" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="title">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="logo">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/logo.png" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/title.png" alt="">
+        <div class="card-block" harry-potter="logo">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/logo.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="card-block" harry-potter="title">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/title.png" alt="">
-        </div>
-    </div>
 
-    <div class="card-block" harry-potter="trio">
-        <div class="side front">
-            <img src="images/back.png" alt="">
+        <div class="card-block" harry-potter="platform">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/platform-9-3-4.jpg" alt="">
+            </div>
         </div>
-        <div class="side back">
-            <img src="images/trio.png" alt="">
+        <div class="card-block" harry-potter="platform">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/platform-9-3-4.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="card-block" harry-potter="title">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/title.png" alt="">
+            </div>
+        </div>
+        <div class="card-block" harry-potter="title">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/title.png" alt="">
+            </div>
+        </div>
+
+        <div class="card-block" harry-potter="trio">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/trio.png" alt="">
+            </div>
+        </div>
+        <div class="card-block" harry-potter="trio">
+            <div class="side front">
+                <img src="images/back.png" alt="">
+            </div>
+            <div class="side back">
+                <img src="images/trio.png" alt="">
+            </div>
         </div>
     </div>
-    <div class="card-block" harry-potter="trio">
-        <div class="side front">
-            <img src="images/back.png" alt="">
-        </div>
-        <div class="side back">
-            <img src="images/trio.png" alt="">
-        </div>
-    </div>
-  </div>
-  <audio id="matched" src="audio/matched.wav" preload="auto"></audio>
-  <audio id="wrong" src="audio/wrong.mp3" preload="auto"></audio>
-  <script src="game.js"></script>
+    <audio id="matched" src="audio/matched.wav" preload="auto"></audio>
+    <audio id="wrong" src="audio/wrong.mp3" preload="auto"></audio>
+  <script src="scripts/game.js"></script>
 </body>
 </html>

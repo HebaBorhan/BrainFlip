@@ -1,9 +1,83 @@
-* {
-    box-sizing: border-box;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+header {
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    display: flex;
+    align-items: right;
+}
+
+.logo img {
+    width: 150px; /* Adjust according to your logo dimensions */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+nav a.active, nav a:hover {
+    background-color: #696a6a;
+    color: white;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; /* Adjust the distance from the right edge */
+}
+
+.auth-buttons button {
+    background-color: #696a6a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #e9ecef;
+    margin: 10px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.breadcrumb span {
+    color: #6c757d;
 }
 
 .buttons {
@@ -12,7 +86,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
     background-color: rgba(149, 146, 146, 0.579);
 }
 

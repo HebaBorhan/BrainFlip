@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #ebe9e9;
+    background-color: #e9ecef;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -122,7 +122,7 @@ td {
 }
 
 .buttons button {
-    background-color: #007bff;
+    background-color: #f39c12;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -132,5 +132,5 @@ td {
 }
 
 .buttons button:hover {
-    background-color: #0056b3;
+    background-color: #e67e22;
 }
