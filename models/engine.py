@@ -68,3 +68,7 @@ class DBStorage:
     def get_user_by_email(self, email):
         """Retrieve a user by email"""
         return self.__session.query(User).filter(User.email == email).first()
+
+    def get_top_scores(self, limit=15):
+        """Retrieve the top scores"""
+        return self.__session.query(Score).order_by(Score.score.desc()).limit(limit).all()

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logoBF.png" alt="BrainFlip">
+        </div>
+        <nav>
+            <a href="landing.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="game.html">Game</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <div class="auth-buttons">
+                <button onclick="location.href='login.html'">Login</button>
+                <button onclick="location.href='registration.html'">Registration</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="breadcrumb">
+            <a href="/">Home</a> / <span>Dashboard</span>
+        </div>
+        <div class="container">
+            <div class="user-profile">
+                <h2>User Profile</h2>
+                <p>Username: {{ user.username }}</p>
+                <p>Email: {{ user.email }}</p>
+                <p>High Score: {{ top_scores[0].score if top_scores else 'N/A' }}</p>
+            </div>
+            <div class="recent-scores">
+                <h2>Top 10 Scores</h2>
+                <ul>
+                    {% for score in top_scores %}
+                        <li>{{ score.score }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='{{ url_for('game.start_game') }}'">Start Game</button>
+            <button onclick="location.href='{{ url_for('game.leaderboard') }}'">Leaderboard</button>
+        </div>
+    </main>
+</body>
+</html>
+
