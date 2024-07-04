@@ -11,7 +11,6 @@ register_bp = Blueprint("register", __name__)
 @register_bp.route("/api/register", methods=["POST", "GET"])
 def register_user():
     """Register a new user"""
-    print(request.method)
     if request.method == "GET":
         return render_template('registration.html')
 

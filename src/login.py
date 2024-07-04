@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Start a login session"""
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from src.models import storage
 import re
 from src.models.user import User
@@ -11,9 +11,11 @@ login_bp = Blueprint("login", __name__)
 
 
 
-@login_bp.route("/api/login", methods=["POST"])
+@login_bp.route("/api/login", methods=["POST", "GET"])
 def login_user():
     """Login existed user"""
+    if request.method == "GET":
+        return render_template('login.html')
     data = request.get_json()
 
     username_or_email = data.get("username_or_email")
