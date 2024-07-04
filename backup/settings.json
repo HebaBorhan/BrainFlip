@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./web_flask",
+        "./web_"
+    ]
+}

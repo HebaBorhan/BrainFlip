@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header {
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    display: flex;
+    align-items: right;
+}
+
+.logo img {
+    width: 150px; /* Adjust according to your logo dimensions */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+nav a.active, nav a:hover {
+    background-color: #696a6a;
+    color: white;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; /* Adjust the distance from the right edge */
+}
+
+.auth-buttons button {
+    background-color: #696a6a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #e9ecef;
+    margin: 10px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.breadcrumb a {
+    color: #6c757d;
+}
+
+#intro {
+    position: relative;
+    padding-top: 70px; /* Adjusted to accommodate the header height */
+    background: url('images/cover.jpg') no-repeat center top/cover;
+    text-align: center;
+    color: white;
+    height: 100vh; /* Ensures section covers entire viewport height */
+}
+
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Limit text width to prevent overflow on smaller screens */
+}
+
+.intro-text h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #7a3f0a;
+    padding-top: 20px;
+}
+
+.intro-text p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.intro-text .play-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.intro-text .play-button:hover {
+    background-color: #e67e22;
+}
+
+#features {
+    padding: 0 0;
+    margin-top: -150px;
+    text-align: center;
+    background-color: #fff; /* Adjust as needed */
+}
+
+#features h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #7a3f0a;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 0 0 calc(33.33% - 40px); /* Adjust width of features */
+    margin-bottom: 40px; /* Adjust spacing between features */
+    text-align: center;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-info {
+    margin-top: 20px;
+}
+
+.feature-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-info p {
+    font-size: 18px;
+    color: #666;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#about {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff; /* Adjust as needed */
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #7a3f0a;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-container ul li {
+    margin-bottom: 20px;
+}
+
+.about-container ul li strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.about-container ul li ul {
+    padding-left: 20px;
+}
+
+.about-container ul li ul li {
+    margin-bottom: 5px;
+}
+
+.about-container a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}
