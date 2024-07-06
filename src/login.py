@@ -49,7 +49,7 @@ def login_user():
             )
 
         # Here you can set up a session or token for authentication
-        return jsonify({"success": True, "message": "Login successful"}), 200
+        return jsonify({"success": True, "message": "Login successful", "e-mail": user.email, "username" : user.username}), 200
     except Exception as e:
         return jsonify({"success": False, "message": "Server error"}), 500
 

@@ -14,6 +14,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(data => {
       document.getElementById('message').textContent = data.message;
       document.getElementById('message').className = data.success ? 'alert alert-success' : 'alert alert-danger';
+      //check cookie again to update the username
+      document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
     });
   });
 

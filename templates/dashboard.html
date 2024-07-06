@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dashboard.css') }}">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/logoBF.png" alt="BrainFlip">
+            <img src="static/images/logoBF.png" alt="BrainFlip">
         </div>
         <nav>
-            <a href="landing.html">Home</a>
-            <a href="dashboard.html" class="active">Dashboard</a>
-            <a href="game.html">Game</a>
-            <a href="leaderboard.html">Leaderboard</a>
+            <a href="/landing">Home</a>
+            <a href="/dashboard" class="active">Dashboard</a>
+            <a href="/game">Game</a>
+            <a href="templates/leaderboard.html">Leaderboard</a>
             <div class="auth-buttons">
                 <button onclick="location.href='login.html'">Login</button>
                 <button onclick="location.href='registration.html'">Registration</button>

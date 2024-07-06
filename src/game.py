@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Start a score recording session for a game"""
-from flask import request, jsonify, Blueprint
+from flask import request, jsonify, Blueprint, render_template
 from src.models.user import User
 from src.models.score import Score
 from src.models import storage
@@ -58,3 +58,9 @@ def get_scores():
     except Exception as e:
         print(f"Error fetching scores: {str(e)}")
         return jsonify({"message": "Failed to fetch scores"}), 500
+
+@game_bp.route("/game", methods=["GET"])
+def get_game():
+    """Fetch game data"""
+    return render_template ('game.html')
+

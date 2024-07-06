@@ -20,3 +20,5 @@ class User(BaseModel, Base):
     def __init__(self, *args, **kwargs):
         """Initialize user"""
         super().__init__(*args, **kwargs)
+
+#create verify_password (self, password) function

@@ -22,6 +22,8 @@ sudo pip3 install python-dotenv
 
 sudo pip3 install Flask
 
+sudo pip3 install mysqlclient 
+
 mkdir brainflip
 cd brainflip
 npm init -y
