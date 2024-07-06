@@ -15,7 +15,7 @@ def dashboard():
     username = request.cookies.get("username")
     if not username:
         return redirect(
-            url_for("game.login")
+            url_for("login.login_user")
         )  # Redirect to login if user is not authenticated
 
     user = storage.get_user_by_username(username)
