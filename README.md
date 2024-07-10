@@ -20,10 +20,10 @@ As a Portfolio Project for ALX, we are eager to share our journey and we hope yo
 ## Introduction
 BrainFlip is a web-based memory game designed to enhance memory skills through engaging and interactive gameplay.
 
-Blog Article: https://medium.com/@hebaborhan87/brainflip-alx-portfolio-project-2c1298220c25
-Deployed Site: https://brainflip.thedreamcatcher.dev/
-Heba AbdAllah Linkedin: https://www.linkedin.com/in/hebamagdy/
-Heba Zaki Linkedin: https://www.linkedin.com/in/heba-borhan/
+* Blog Article: https://medium.com/@hebaborhan87/brainflip-alx-portfolio-project-2c1298220c25
+* Deployed Site: https://brainflip.thedreamcatcher.dev/
+* Heba AbdAllah Linkedin: https://www.linkedin.com/in/hebamagdy/
+* Heba Zaki Linkedin: https://www.linkedin.com/in/heba-borhan/
 
 ## Installation
 
@@ -37,8 +37,8 @@ Heba Zaki Linkedin: https://www.linkedin.com/in/heba-borhan/
 No known bugs at this time.
 
 ## Authors
-HebaM94 - hebamagde@gmail.com
-HebaZaki - h_borhan@hotmail.com
+* HebaM94 - hebamagde@gmail.com
+* HebaZaki - h_borhan@hotmail.com
 
 ## License
 Public Domain. No copy write protection. 
