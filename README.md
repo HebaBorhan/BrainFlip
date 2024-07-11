@@ -27,9 +27,46 @@ BrainFlip is a web-based memory game designed to enhance memory skills through e
 
 ## Installation
 
+1. Clone the repository:
+
+git clone https://github.com/yourusername/brainflip.git
+cd brainflip
+
+2. Set up the virtual environment:
+
+
+python3 -m venv venv
+source venv/bin/activate
+
+3. Run the installation script:
+
+./installation.sh
+
+4. Set up the database:
+
+mysql -u root -p < setup_mysql.sql
+
+5. Run the Flask application:
+
+flask run
+
+
 ## Usage
 
+1. Register: Create a new account to start using BrainFlip.
+2. Login: Access your account using your username or email and password.
+3. Play: Engage in educational games to enhance your knowledge.
+4. Leaderboard: Check your rankings and compare with other use
+
 ## contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+    1. Fork the repository.
+    2. Create a new branch (git checkout -b feature-branch).
+    3. Make your changes and commit them (git commit -m 'Add new feature').
+    4. Push to the branch (git push origin feature-branch).
+    5. Open a Pull Request.
 
 ## Related projects
 
