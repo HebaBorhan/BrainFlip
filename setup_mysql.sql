@@ -1,3 +1,7 @@
+-- run mysql server
+-- sudo /usr/local/mysql/support-files/mysql.server start
+
+
 -- Create a MySQL server database for BrainFlip
 
 CREATE DATABASE if NOT EXISTS brainflip_db;

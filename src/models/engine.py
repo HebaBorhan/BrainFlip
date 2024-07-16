@@ -26,7 +26,7 @@ class DBStorage:
         host = os.getenv("BF_MYSQL_HOST")
         database = os.getenv("BF_MYSQL_DB")
         self.__engine = create_engine(
-            f"mysql+mysqldb://{user}:{password}@{host}/{database}", pool_pre_ping=True
+            f"mysql+pymysql://{user}:{password}@{host}/{database}", pool_pre_ping=True
         )
 
     def all(self, cls=None):
