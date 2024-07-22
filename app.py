@@ -8,7 +8,6 @@ with app.app_context():
 
     from src.login import login_bp
     from src.game import game_bp
-
     from src.dashboard import dashboard_bp
     from src.leaderboard import leaderboard_bp
     from src.registration import register_bp
@@ -31,6 +30,9 @@ with app.app_context():
 
         storage.close()
 
+    @app.route("/test", methods=["GET"])
+    def test():
+        return render_template('base.html')
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

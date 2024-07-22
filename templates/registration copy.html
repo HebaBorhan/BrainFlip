@@ -1,8 +1,30 @@
-{% extends 'base.html' %}
-{% block  content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainFlip Registration</title>
+  <link rel="stylesheet" href="/static/styles/registration.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="/static/images/logoBF.png" alt="BrainFlip">
+    </div>
+    <nav>
+        <a href="landing.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="game.html">Game</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <div class="auth-buttons">
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='registration.html'">Registration</button>
+        </div>
+    </nav>
+</header>
 <main>
     <div class="breadcrumb">
-        <a href="{{url_for('landing')}}">Home</a> / <span>Registration</span>
+        <a href="landing.html">Home</a> / <span>Registration</span>
     </div>
 </main>
   <div class="container">
@@ -30,4 +52,5 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/static/scripts/registration.js"></script>
-{% endblock %}
+</body>
+</html>
